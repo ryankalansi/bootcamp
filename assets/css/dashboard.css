@@ -1,0 +1,38 @@
+/* Reset dasar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Warna latar belakang */
+}
+
+/* Container untuk progres */
+.progress-container {
+    background-color: #ffffff; /* Warna putih */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Card */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar pada card */
+.card img {
+    border-radius: 8px;
+}
+
+/* Progress bar */
+.progress-bar {
+    background-color: #17a2b8; /* Warna biru terang */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .progress-container {
+        margin-bottom: 15px;
+    }
+}
