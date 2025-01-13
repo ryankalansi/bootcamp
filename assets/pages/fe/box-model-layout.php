@@ -94,7 +94,8 @@ session_start();
         </section>
 
         <!-- Tombol Selesai -->
-        <div class="text-center mt-5">
+        <div class="d-flex justify-content-between mt-5">
+            <a href="landing.php" class="btn btn-secondary">Kembali</a>
             <button class="btn btn-success" onclick="markAsComplete()">Selesai</button>
         </div>
     </main>
@@ -105,13 +106,15 @@ session_start();
 
     <script>
     function markAsComplete() {
-        <?php
-        // Tandai materi Box Model sebagai selesai
-        $_SESSION['completed_box_model_layout'] = true;
-        ?>
-        alert("Terima kasih telah membaca materi! Anda akan melanjutkan ke materi berikutnya.");
-        window.location.href = 'latihan.php'; // Redirect ke latihan.php
-    }
+    // Tandai materi yang selesai
+    localStorage.setItem("materiFE2", true); // Ganti dengan materi yang sesuai
+    <?php
+            // Tandai materi Responsive Design sebagai selesai
+            $_SESSION['completed_box_model_layout'] = true;
+            ?>
+    alert("Terima kasih telah membaca materi HTML & CSS! Anda akan melanjutkan ke materi berikutnya.");
+    window.location.href = 'latihan.php'; // Redirect ke materi berikutnya
+}
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

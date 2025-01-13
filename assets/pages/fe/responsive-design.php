@@ -126,7 +126,8 @@ session_start();
         </section>
 
         <!-- Tombol Selesai -->
-        <div class="text-center mt-5">
+        <div class="d-flex justify-content-between mt-5">
+            <a href="landing.php" class="btn btn-secondary">Kembali</a>
             <button class="btn btn-success" onclick="markAsComplete()">Selesai</button>
         </div>
     </main>
@@ -137,6 +138,7 @@ session_start();
 
     <script>
         function markAsComplete() {
+            localStorage.setItem("materiFE5", true);
             <?php
             // Tandai materi Responsive Design sebagai selesai
             $_SESSION['completed_responsive_design'] = true;

@@ -111,10 +111,12 @@ session_start();
             <hr>
 
             <!-- Tombol Submit -->
-            <div class="text-center">
+            <div class="d-flex justify-content-between mt-5">
+            <a href="landing.php" class="btn btn-secondary">Kembali</a>
                 <button type="button" class="btn btn-primary" onclick="checkAnswers()">Submit</button>
             </div>
         </form>
+        
 
 
         <!-- Hasil -->
@@ -163,6 +165,7 @@ session_start();
             resultDiv.classList.remove('hidden');
 
             if (score >= 4) { // Minimal 4 benar
+                localStorage.setItem("materiFE3", true);
                 <?php
                     // Tandai materi Box Model sebagai selesai
                     $_SESSION['completed_latihan'] = true;

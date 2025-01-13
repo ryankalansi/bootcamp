@@ -162,6 +162,7 @@ session_start();
             resultDiv.classList.remove('hidden');
 
             if (score >= 4) { // Minimal 4 benar
+                localStorage.setItem("materiFE6", true);
                 <?php
                     // Tandai materi Box Model sebagai selesai
                     $_SESSION['completed_latihan2'] = true;

@@ -111,7 +111,8 @@ session_start();
             <hr>
 
             <!-- Tombol Submit -->
-            <div class="text-center">
+            <div class="d-flex justify-content-between mt-5">
+        <a href="landing.php" class="btn btn-secondary">Kembali</a>
                 <button type="button" class="btn btn-primary" onclick="checkAnswers()">Submit</button>
             </div>
         </form>
@@ -182,6 +183,7 @@ session_start();
             resultDiv.classList.remove('hidden');
 
             if (score >= 4) {
+                localStorage.setItem("materiBE4", true);
             // Tampilkan modal notifikasi
             const finalScoreElement = document.getElementById('finalScore');
             finalScoreElement.textContent = `${score}/5`;

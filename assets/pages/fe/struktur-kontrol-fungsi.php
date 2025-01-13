@@ -110,7 +110,8 @@ console.log(hasilKali); // Output: 12
         </section>
 
         <!-- Tombol Selesai -->
-        <div class="text-center mt-5">
+        <div class="d-flex justify-content-between mt-5">
+        <a href="landing.php" class="btn btn-secondary">Kembali</a>
             <button class="btn btn-success" onclick="markAsComplete()">Selesai</button>
         </div>
     </main>
@@ -121,6 +122,7 @@ console.log(hasilKali); // Output: 12
 
     <script>
     function markAsComplete() {
+        localStorage.setItem("materiFE8", true);
         <?php
         // Tandai materi Struktur Kontrol dan Fungsi sebagai selesai
         $_SESSION['completed_struktur_kontrol_fungsi'] = true;

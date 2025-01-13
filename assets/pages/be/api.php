@@ -115,7 +115,8 @@ app.delete('/users/:id', (req, res) => {
         </section>
 
         <!-- Tombol Selesai -->
-        <div class="text-center mt-5">
+        <div class="d-flex justify-content-between mt-5">
+        <a href="landing.php" class="btn btn-secondary">Kembali</a>
             <button class="btn btn-success" onclick="markAsComplete()">Selesai</button>
         </div>
     </main>
@@ -126,6 +127,7 @@ app.delete('/users/:id', (req, res) => {
 
     <script>
      function markAsComplete() {
+        localStorage.setItem("materiBE3", true);
             <?php
             $_SESSION['completed_api'] = true;
             ?>

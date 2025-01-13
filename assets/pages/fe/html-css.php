@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,9 +99,11 @@ p {
         </section>
 
         <!-- Tombol Selesai -->
-        <div class="text-center mt-5">
+        <div class="d-flex justify-content-between mt-5">
+            <a href="landing.php" class="btn btn-secondary">Kembali</a>
             <button class="btn btn-success" onclick="markAsComplete()">Selesai</button>
         </div>
+
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
@@ -105,15 +111,17 @@ p {
     </footer>
 
     <script>
-    function markAsComplete() {
-        <?php
-        session_start();
-        // Tandai materi HTML & CSS sebagai selesai
-        $_SESSION['completed_html_css'] = true;
-        ?>
-        alert("Terima kasih telah membaca materi HTML & CSS! Anda akan melanjutkan ke Box Model dan Layout.");
-        window.location.href = 'box-model-layout.php'; // Redirect ke materi berikutnya
-    }
+   function markAsComplete() {
+    // Tandai materi yang selesai
+    localStorage.setItem("materiFE1", true); // Ganti dengan materi yang sesuai
+    <?php
+            // Tandai materi Responsive Design sebagai selesai
+            $_SESSION['completed_html_css'] = true;
+            ?>
+
+    alert("Terima kasih telah membaca materi HTML & CSS! Anda akan melanjutkan ke materi berikutnya.");
+    window.location.href = 'box-model-layout.php'; // Redirect ke materi berikutnya
+}
     </script>
 </body>
 </html>

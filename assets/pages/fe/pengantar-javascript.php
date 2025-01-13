@@ -154,6 +154,7 @@ button.addEventListener('click', function() {
 
     <script>
     function markAsComplete() {
+        localStorage.setItem("materiFE7", true);
         <?php
         // Tandai materi Box Model sebagai selesai
         $_SESSION['completed_pengantar_javascript'] = true;
