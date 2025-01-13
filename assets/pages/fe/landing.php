@@ -81,72 +81,144 @@ function isLoggedIn() {
                             <a href="html-css.php" class="btn btn-success" id="memulaiMateriBtn">Memulai Materi</a>
                         </div>
             </div>
+
             <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Box Model & Layout
-                                <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span>
-                            </h5>
-                            <p class="card-text">Belajar konsep dan teknik-teknik mengontrol tata letak dan kustomisasi yang lebih kompleks. Pelajaran ini merangkum Box Model, lebih banyak property CSS, Flexbox dan Grid Layout.</p>
-                            <a href="#" class="btn btn-success disabled" >Memulai Materi</a>
-                        </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Box Model & Layout
+                        <?php if (!isset($_SESSION['completed_html_css']) || !$_SESSION['completed_html_css']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Belajar konsep dan teknik-teknik mengontrol tata letak dan kustomisasi yang lebih kompleks. Pelajaran ini merangkum Box Model, lebih banyak property CSS, Flexbox dan Grid Layout.</p>
+                        <?php if (isset($_SESSION['completed_html_css']) && $_SESSION['completed_html_css']): ?>
+                            <a href="box-model-layout.php" class="btn btn-success">Memulai Materi</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
+                        <?php endif; ?>
+                </div>
             </div>
+
             <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Latihan <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-                            <p class="card-text">Pelajaran ini akan memberi Anda praktik langsung membuat halaman web dengan ilmu yang sudah Anda dapatkan sampai saat ini.</p>
-                            <a href="#" class="btn btn-success disabled" >Memulai Materi</a>
-                        </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                       Latihan
+                        <?php if (!isset($_SESSION['completed_box_model_layout']) || !$_SESSION['completed_box_model_layout']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Anda akan mengerjakan latihan dnegan materi yang dibawakan sebelumnya.</p>
+                        <?php if (isset($_SESSION['completed_box_model_layout']) && $_SESSION['completed_box_model_layout']): ?>
+                            <a href="latihan.php" class="btn btn-success">Memulai Latihan</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Latihan</a>
+                        <?php endif; ?>
+                </div>
             </div>
+
             <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Interaktivitas CSS <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-                            <p class="card-text">Di sini yang di maksud adalah kemampuan mengubah gaya sebuah elemen berdasarkan aksi yang dilakukan pengguna, seperti hover, klik, atau fokus. Ini membuat situs web Anda lebih interaktif dan ramah pengguna.</p>
-                            <a href="#" class="btn btn-success disabled" >Memulai Materi</a>
-                        </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                       Interaktivitas CSS
+                        <?php if (!isset($_SESSION['completed_latihan']) || !$_SESSION['completed_latihan']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Disini yang di maksud adalah kemampuan mengubah gaya sebuah elemen berdasarkan aksi yang dilakukan pengguna, seperti hover, klik, atau fokus. Ini membuat situs web Anda lebih interaktif dan ramah pengguna.</p>
+                        <?php if (isset($_SESSION['completed_latihan']) && $_SESSION['completed_latihan']): ?>
+                            <a href="interaktivitas-css.php" class="btn btn-success">Memulai Materi</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
+                        <?php endif; ?>
+                </div>
             </div>
+
             <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Responsive Design <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-                            <p class="card-text">Desain responsif memastikan bahwa situs web Anda akan terlihat bagus dan berfungsi denga baik pada semua jenis gawai, dari komputer desktop hingga ponsel. Dengan pelajaran ini, Anda bisa membuat situs web yang secara otomatis menyesuaikan tampilan dan desainnya ke berbagai ukuran layar yang berbeda.</p>
-                            <a href="#" class="btn btn-success disabled" >Memulai Materi</a>
-                        </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                       Responsive Design
+                        <?php if (!isset($_SESSION['completed_interaktivitas_css']) || !$_SESSION['completed_interaktivitas_css']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Desain responsif memastikan bahwa situs web Anda akan terlihat bagus dan berfungsi denga baik pada semua jenis gawai, dari komputer desktop hingga ponsel. Dengan pelajaran ini, Anda bisa membuat situs web yang secara otomatis menyesuaikan tampilan dan desainnya ke berbagai ukuran layar yang berbeda.</p>
+                        <?php if (isset($_SESSION['completed_interaktivitas_css']) && $_SESSION['completed_interaktivitas_css']): ?>
+                            <a href="responsive-design.php" class="btn btn-success">Memulai Materi</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
+                        <?php endif; ?>
+                </div>
             </div>
+
             <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Pengantar JavasScript <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-                            <p class="card-text">Desain responsif memastikan bahwa situs web Anda akan terlihat bagus dan berfungsi denga baik pada semua jenis gawai, dari komputer desktop hingga ponsel. Dengan pelajaran ini, Anda bisa membuat situs web yang secara otomatis menyesuaikan tampilan dan desainnya ke berbagai ukuran layar yang berbeda.</p>
-                            <a href="#" class="btn btn-success disabled" >Memulai Materi</a>
-                        </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                       Latihan 2
+                        <?php if (!isset($_SESSION['completed_responsive_design']) || !$_SESSION['completed_responsive_design']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Anda akan mengerjakan latihan dnegan materi yang dibawakan sebelumnya.</p>
+                        <?php if (isset($_SESSION['completed_responsive_design']) && $_SESSION['completed_responsive_design']): ?>
+                            <a href="latihan2.php" class="btn btn-success">Memulai Latihan</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Latihan</a>
+                        <?php endif; ?>
+                </div>
             </div>
+
             <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Struktur Kontrol dan Fungsi <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-                            <p class="card-text">Desain responsif memastikan bahwa situs web Anda akan terlihat bagus dan berfungsi denga baik pada semua jenis gawai, dari komputer desktop hingga ponsel. Dengan pelajaran ini, Anda bisa membuat situs web yang secara otomatis menyesuaikan tampilan dan desainnya ke berbagai ukuran layar yang berbeda.</p>
-                            <a href="#" class="btn btn-success disabled" >Memulai Materi</a>
-                        </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                    Pengantar JavasScript
+                        <?php if (!isset($_SESSION['completed_latihan2']) || !$_SESSION['completed_latihan2']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Pelajari dasar-dasar JavaScript, bahasa pemrograman yang digunakan untuk menambahkan interaktivitas pada website.</p>
+                        <?php if (isset($_SESSION['completed_latihan2']) && $_SESSION['completed_latihan2']): ?>
+                            <a href="pengantar-javascript.php" class="btn btn-success">Memulai Materi</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
+                        <?php endif; ?>
+                </div>
             </div>
+
             <div class="card mt-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Object Oriented Programming (OOP)<span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-                            <p class="card-text">Desain responsif memastikan bahwa situs web Anda akan terlihat bagus dan berfungsi denga baik pada semua jenis gawai, dari komputer desktop hingga ponsel. Dengan pelajaran ini, Anda bisa membuat situs web yang secara otomatis menyesuaikan tampilan dan desainnya ke berbagai ukuran layar yang berbeda.</p>
-                            <a href="#" class="btn btn-success disabled" >Memulai Materi</a>
-                        </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                    Struktur Kontrol dan Fungsi
+                        <?php if (!isset($_SESSION['completed_pengantar_javascript']) || !$_SESSION['completed_pengantar_javascript']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Belajar memahami logika program menggunakan JavaScript</p>
+                        <?php if (isset($_SESSION['completed_pengantar_javascript']) && $_SESSION['completed_pengantar_javascript']): ?>
+                            <a href="struktur-kontrol-fungsi.php" class="btn btn-success">Memulai Materi</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
+                        <?php endif; ?>
+                </div>
             </div>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                    Latihan 3
+                        <?php if (!isset($_SESSION['completed_struktur_kontrol_fungsi']) || !$_SESSION['completed_struktur_kontrol_fungsi']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Belajar memahami logika program menggunakan JavaScript</p>
+                        <?php if (isset($_SESSION['completed_struktur_kontrol_fungsi']) && $_SESSION['completed_struktur_kontrol_fungsi']): ?>
+                            <a href="latihan3.php" class="btn btn-success">Memulai Latihan</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Latihan</a>
+                        <?php endif; ?>
+                </div>
+            </div>
+
+           
         </section>
     </main>
 

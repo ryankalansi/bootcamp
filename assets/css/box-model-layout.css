@@ -1,0 +1,69 @@
+/* Box Model */
+.box-example {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  background-color: #4caf50;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 20px;
+}
+
+.box p {
+  color: white;
+  font-size: 18px;
+}
+
+/* Layout with Flexbox */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px;
+}
+
+.flex-item {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Flexbox Demo */
+.flexbox-demo {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+.flexbox-item {
+  background-color: #2196f3;
+  color: white;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px;
+}
+
+.grid-item {
+  background-color: #f44336;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}

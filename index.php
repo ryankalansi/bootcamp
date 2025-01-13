@@ -67,7 +67,8 @@ session_start();
                                     <?= htmlspecialchars($_SESSION['username']); ?>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="dashboard.php">Dasboard</a></li>
+                                    <li><a class="dropdown-item" href="profil.php">Profil</a></li>
+                                    <li><a class="dropdown-item" href="dashboard.php">Dashboard</a></li>
                                     <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                                 </ul>
                             </li>
