@@ -71,53 +71,65 @@ function isLoggedIn() {
     </div>
 </section>
 
-        <section id="timeline" class="timeline section m-5">
+<section id="timeline" class="timeline section m-5">
             <div class="card mt-4">
-        <div class="card-body">
-            <h5 class="card-title">Pengenalan Pemrograman Server</h5>
-            <p class="card-text">
-                Belajar bagaimana server bekerja, memahami konsep dasar server-side scripting, serta membangun server sederhana menggunakan Node.js.
-            </p>
-            <a href="pengenalan.php" class="btn btn-success" id="memulaiMateriBtn">Memulai Materi</a>
-        </div>
-    </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pengenalan Pemrograman Server</h5>
+                            <p class="card-text">Belajar bagaimana server bekerja, memahami konsep dasar server-side scripting, serta membangun server sederhana menggunakan Node.js.</p>
+                            <a href="pengenalan.php" class="btn btn-success" id="memulaiMateriBtn">Memulai Materi</a>
+                        </div>
+            </div>
 
-    <div class="card mt-4">
-        <div class="card-body">
-            <h5 class="card-title">Pengelolaan Database <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-            <p class="card-text">
-                Memahami perbedaan database SQL dan NoSQL, serta belajar mengelola data menggunakan MySQL dan MongoDB.
-            </p>
-            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
-        </div>
-    </div>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Pengelolaan Database
+                        <?php if (!isset($_SESSION['completed_pengenalan']) || !$_SESSION['completed_pengenalan']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text">Memahami perbedaan database SQL dan NoSQL, serta belajar mengelola data menggunakan MySQL dan MongoDB.</p>
+                        <?php if (isset($_SESSION['completed_pengenalan']) && $_SESSION['completed_pengenalan']): ?>
+                            <a href="pengelolaan-database.php" class="btn btn-success">Memulai Materi</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
+                        <?php endif; ?>
+                </div>
+            </div>
 
-    <div class="card mt-4">
-        <div class="card-body">
-            <h5 class="card-title">Membuat REST API <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-            <p class="card-text">
-                Pelajari cara membuat RESTful API untuk menghubungkan aplikasi frontend dengan backend, menggunakan Express.js dan konsep routing.
-            </p>
-            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
-        </div>
-    </div>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                       Membuat REST API
+                        <?php if (!isset($_SESSION['completed_pengelolaan_database']) || !$_SESSION['completed_pengelolaan_database']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text"> Pelajari cara membuat RESTful API untuk menghubungkan aplikasi frontend dengan backend, menggunakan Express.js dan konsep routing.</p>
+                        <?php if (isset($_SESSION['completed_pengelolaan_database']) && $_SESSION['completed_pengelolaan_database']): ?>
+                            <a href="api.php" class="btn btn-success">Memulai Materi</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
+                        <?php endif; ?>
+                </div>
+            </div>
 
-    <div class="card mt-4">
-        <div class="card-body">
-            <h5 class="card-title">Latihan <span class="float-right">
-                                    <i class="fas fa-lock"></i>
-                                </span></h5>
-            <p class="card-text">
-            Pelajaran ini akan memberi Anda praktik langsung mengenai back-end development dengan ilmu yang sudah Anda dapatkan sampai saat ini.
-            </p>
-            <a href="#" class="btn btn-success disabled">Memulai Materi</a>
-        </div>
-    </div>
-
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                       Latihan
+                        <?php if (!isset($_SESSION['completed_api']) || !$_SESSION['completed_api']): ?>
+                             <span class="float-right"><i class="fas fa-lock"></i></span>
+                        <?php endif; ?>
+                    </h5>
+                    <p class="card-text"> Anda akan mengerjakan latihan dnegan materi yang dibawakan sebelumnya.</p>
+                        <?php if (isset($_SESSION['completed_api']) && $_SESSION['completed_api']): ?>
+                            <a href="latihan.php" class="btn btn-success">Memulai Latihan</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-success disabled">Memulai Latihan</a>
+                        <?php endif; ?>
+                </div>
+            </div>
         </section>
     </main>
 

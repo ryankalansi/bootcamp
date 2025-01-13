@@ -1,32 +1,5 @@
 <?php
-// Data tutorial
-$tutorials = [
-    [
-        'judul' => 'Bagaimana Server Bekerja',
-        'konten' => '<p>Server adalah komputer atau sistem yang menyediakan layanan untuk klien. Ketika klien mengirim permintaan (request), server akan memprosesnya dan memberikan tanggapan (response). Berikut adalah cara kerja server secara umum:</p>
-<ol>
-    <li>Menerima Permintaan</li>
-    <li>Memproses Permintaan</li>
-    <li>Mengirimkan Tanggapan</li>
-    <li>Menjaga Koneksi</li>
-</ol>',
-        'gambar' => '../../img/server.jpg',
-    ],
-    [
-        'judul' => 'Dasar-Dasar Server-Side Scripting',
-        'konten' => '<p>Server-side scripting memungkinkan pembuatan aplikasi web dinamis. Contoh bahasa pemrograman server-side: PHP, Node.js, Python, Ruby.</p>',
-    ],
-    [
-        'judul' => 'Membangun Server dengan Node.js',
-        'konten' => '<p>Node.js adalah runtime JavaScript yang memungkinkan kita menjalankan JavaScript di sisi server. Berikut adalah contoh server sederhana menggunakan Node.js:</p>',
-        'kode' => 'const http = require(\'http\'); 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { \'Content-Type\': \'text/plain\' });
-    res.end(\'Hello, World!\');
-});
-server.listen(3000, () => console.log(\'Server berjalan di http://localhost:3000\'));',
-    ],
-];
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -34,44 +7,124 @@ server.listen(3000, () => console.log(\'Server berjalan di http://localhost:3000
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengenalan Pemrograman Server</title>
-    <link rel="stylesheet" href="../../css/pengenalan.css">
+    <title>Belajar Backend: Pengenalan Pemrograman Server</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Pengenalan Pemrograman Server</h1>
-        <nav>
-            <ul>
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#concepts">Bagaimana Server Bekerja</a></li>
-                <li><a href="#scripting">Server-Side Scripting</a></li>
-                <li><a href="#nodejs">Node.js</a></li>
-            </ul>
-        </nav>
+    <header class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <h1>Belajar Backend</h1>
+            <p>Materi ini membahas dasar-dasar pemrograman server menggunakan Node.js.</p>
+        </div>
     </header>
 
-    <main>
-        <?php foreach ($tutorials as $tutorial): ?>
-            <section>
-                <h2><?php echo $tutorial['judul']; ?></h2>
-                <div><?php echo $tutorial['konten']; ?></div>
-                <?php if (!empty($tutorial['gambar'])): ?>
-                    <img src="<?php echo $tutorial['gambar']; ?>" alt="<?php echo $tutorial['judul']; ?>">
-                <?php endif; ?>
-                <?php if (!empty($tutorial['kode'])): ?>
-                    <pre><?php echo htmlspecialchars($tutorial['kode']); ?></pre>
-                <?php endif; ?>
-            </section>
-        <?php endforeach; ?>
+    <main class="container my-5">
+        <!-- Pengantar -->
+        <section id="pengantar">
+            <h2 class="text-primary">Pengantar Pemrograman Server</h2>
+            <p>
+                Pemrograman server adalah proses membangun logika di sisi server untuk menangani permintaan (request) dari klien dan memberikan respons.
+                Server berperan sebagai pengelola data dan logika utama aplikasi web.
+            </p>
+            <h3>Bagaimana Server Bekerja?</h3>
+            <ul>
+                <li><strong>Request:</strong> Klien (browser) mengirim permintaan ke server.</li>
+                <li><strong>Processing:</strong> Server memproses permintaan, seperti mengambil data dari database.</li>
+                <li><strong>Response:</strong> Server mengirimkan hasil (data atau halaman web) kembali ke klien.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Konsep Dasar Server-Side Scripting -->
+        <section id="konsep-dasar">
+            <h2 class="text-primary">Konsep Dasar Server-Side Scripting</h2>
+            <p>
+                Server-side scripting adalah kode yang dijalankan di server untuk membuat aplikasi dinamis.
+                Node.js adalah salah satu teknologi populer untuk pemrograman server karena performa cepat dan berbasis JavaScript.
+            </p>
+            <h3>Kenapa Memilih Node.js?</h3>
+            <ul>
+                <li>Non-blocking I/O untuk performa tinggi.</li>
+                <li>JavaScript full-stack, memungkinkan penggunaan satu bahasa di frontend dan backend.</li>
+                <li>Ekosistem kaya dengan ribuan paket melalui npm.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Membangun Server Sederhana -->
+        <section id="membangun-server">
+            <h2 class="text-primary">Membangun Server Sederhana dengan Node.js</h2>
+            <p>Langkah pertama adalah membuat server sederhana menggunakan Node.js:</p>
+            <pre class="bg-light p-3 border">
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Halo, ini server pertama Anda!');
+});
+
+server.listen(3000, () => {
+    console.log('Server berjalan di http://localhost:3000');
+});
+            </pre>
+            <h3>Penjelasan Kode</h3>
+            <ul>
+                <li><code>require('http')</code>: Mengimpor modul HTTP bawaan Node.js.</li>
+                <li><code>http.createServer()</code>: Membuat server baru.</li>
+                <li><code>server.listen()</code>: Mengaktifkan server di port tertentu.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Menambahkan Routing -->
+        <section id="routing">
+            <h2 class="text-primary">Menambahkan Routing</h2>
+            <p>Routing memungkinkan server merespons URL yang berbeda dengan konten yang sesuai:</p>
+            <pre class="bg-light p-3 border">
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    if (req.url === '/') {
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('Halaman Utama');
+    } else if (req.url === '/about') {
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('Halaman Tentang Kami');
+    } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Halaman Tidak Ditemukan');
+    }
+});
+
+server.listen(3000, () => {
+    console.log('Server berjalan di http://localhost:3000');
+});
+            </pre>
+        </section>
 
         <!-- Tombol Selesai -->
-        <div class="button-container">
-            <button onclick="alert('Terima kasih telah membaca materi!')">Selesai</button>
+        <div class="text-center mt-5">
+            <button class="btn btn-success" onclick="markAsComplete()">Selesai</button>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Pengenalan Pemrograman Server. Semua hak cipta dilindungi.</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Belajar Backend. Semua hak cipta dilindungi.</p>
     </footer>
+
+    <script>
+    function markAsComplete() {
+        <?php
+        $_SESSION['completed_pengenalan'] = true;
+        ?>
+        alert("Terima kasih telah membaca materi Pengenalan! Anda akan melanjutkan ke Pengelolaan Database.");
+        window.location.href = 'pengelolaan-database.php'; // Redirect ke materi berikutnya
+    }
+    </script>
 </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
