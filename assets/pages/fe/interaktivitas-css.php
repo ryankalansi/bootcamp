@@ -163,7 +163,9 @@ session_start();
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Belajar Interaktivitas CSS. Semua hak cipta dilindungi.</p>
+        <p>© <span>Copyright</span>
+          <strong class="px-1 sitename">Bobootcamp</strong
+          ><span>All Rights Reserved</span></p>
     </footer>
 
     <script>
@@ -173,7 +175,7 @@ session_start();
             // Tandai materi Interaktivitas CSS sebagai selesai
             $_SESSION['completed_interaktivitas_css'] = true;
             ?>
-            alert("Terima kasih telah membaca materi Interaktivitas CSS! Anda akan melanjutkan ke materi responsive design.");
+            alert("Terima kasih telah membaca materi Interaktivitas CSS! Anda akan melanjutkan ke materi berikutnya.");
             window.location.href = 'responsive-design.php'; // Redirect ke halaman latihan
         }
     </script>

@@ -8,7 +8,7 @@ session_start();
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>OneBootcamp</title>
+    <title>Bobootcamp</title>
 
     <!-- Bootstrap -->
     <link
@@ -29,7 +29,12 @@ session_start();
     <header id="header" class="fixed-top">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">OneBootcamp</a>
+        <div class="d-flex align-items-center">
+    <div class="logo">
+        <img src="https://i.ibb.co.com/Pcj6w0D/Logo-bobootcamp1.png" class="px-1" width="50" alt="Logo">
+    </div>
+    <a class="navbar-brand ms-2" href="#">Bobootcamp</a>
+</div>
           <button
             class="navbar-toggler"
             type="button"
@@ -39,6 +44,7 @@ session_start();
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+          
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -106,7 +112,7 @@ session_start();
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <p class="who-we-are">OneBootcamp</p>
+              <p class="who-we-are">Bobootcamp</p>
               <h3>Membuka Pintu Teknologi untuk Semua</h3>
               <p>
                 <i> Belajar Koding di Mana Saja, Kapan Saja, Tanpa Biaya.</i>
@@ -290,10 +296,10 @@ session_start();
       <div class="container copyright text-center mt-4">
         <p>
           © <span>Copyright</span>
-          <strong class="px-1 sitename">OneBootcamp</strong
+          <strong class="px-1 sitename">Bobootcamp</strong
           ><span>All Rights Reserved</span>
         </p>
-        <div class="credits">Designed by Kelompok 1</div>
+        <div class="credits">Designed by Kelompok 4</div>
       </div>
     </footer>
 

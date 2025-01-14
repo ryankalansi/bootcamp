@@ -111,8 +111,7 @@ session_start();
             <hr>
 
             <!-- Tombol Submit -->
-            <div class="d-flex justify-content-between mt-5">
-        <a href="landing.php" class="btn btn-secondary">Kembali</a>
+            <div class="text-center">
                 <button type="button" class="btn btn-primary" onclick="checkAnswers()">Submit</button>
             </div>
         </form>

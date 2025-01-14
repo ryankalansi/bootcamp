@@ -122,8 +122,11 @@ app.delete('/users/:id', (req, res) => {
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Belajar Backend. Semua hak cipta dilindungi.</p>
+        <p>© <span>Copyright</span>
+          <strong class="px-1 sitename">Bobootcamp</strong
+          ><span>All Rights Reserved</span></p>
     </footer>
+
 
     <script>
      function markAsComplete() {

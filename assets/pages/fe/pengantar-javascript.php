@@ -149,8 +149,11 @@ button.addEventListener('click', function() {
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Pengantar JavaScript. Semua hak cipta dilindungi.</p>
+        <p>© <span>Copyright</span>
+          <strong class="px-1 sitename">Bobootcamp</strong
+          ><span>All Rights Reserved</span></p>
     </footer>
+
 
     <script>
     function markAsComplete() {
@@ -159,7 +162,7 @@ button.addEventListener('click', function() {
         // Tandai materi Box Model sebagai selesai
         $_SESSION['completed_pengantar_javascript'] = true;
         ?>
-        alert("Terima kasih telah membaca materi! Anda akan melanjutkan ke materi berikutnya.");
+        alert("Terima kasih telah membaca materi Pengantar JavaScript! Anda akan melanjutkan ke materi berikutnya.");
         window.location.href = 'struktur-kontrol-fungsi.php'; // Redirect ke latihan.php
     }
     </script>

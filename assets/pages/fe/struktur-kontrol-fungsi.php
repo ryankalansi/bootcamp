@@ -117,7 +117,9 @@ console.log(hasilKali); // Output: 12
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Struktur Kontrol dan Fungsi. Semua hak cipta dilindungi.</p>
+        <p>© <span>Copyright</span>
+          <strong class="px-1 sitename">Bobootcamp</strong
+          ><span>All Rights Reserved</span></p>
     </footer>
 
     <script>
@@ -127,7 +129,7 @@ console.log(hasilKali); // Output: 12
         // Tandai materi Struktur Kontrol dan Fungsi sebagai selesai
         $_SESSION['completed_struktur_kontrol_fungsi'] = true;
         ?>
-        alert("Selamat! Anda telah menyelesaikan materi Struktur Kontrol dan Fungsi.");
+        alert("Terima kasih telah membaca materi Struktur Kontrol dan Fungsi! Anda akan melanjutkan ke Latihan 3.");
         window.location.href = 'latihan3.php'; // Redirect ke latihan berikutnya
     }
     </script>

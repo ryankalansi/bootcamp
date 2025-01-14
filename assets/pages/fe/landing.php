@@ -21,7 +21,12 @@ function isLoggedIn() {
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="../../../index.php">OneBootcamp</a>
+        <div class="d-flex align-items-center">
+    <div class="logo">
+        <img src="https://i.ibb.co.com/Pcj6w0D/Logo-bobootcamp1.png" class="px-1" width="50" alt="Logo">
+    </div>
+    <a class="navbar-brand ms-2" href="../../../index.php">Bobootcamp</a>
+</div>
           <button
             class="navbar-toggler"
             type="button"
@@ -59,7 +64,7 @@ function isLoggedIn() {
                 <div class="hero-content pt-5 pb-5">
                     <h1 class="text-warning">Belajar HTML, CSS & Javascript</h1>
                     <p class="text-light">Ilmu fundamental web development yang wajib dipelajari</p>
-                    <a href="#" class="btn btn-warning mt-5" id="pelajariMateriBtn">Pelajari Materi</a>
+                    <a href="html-css.php" class="btn btn-warning mt-5" id="pelajariMateriBtn">Pelajari Materi</a>
                 </div>
             </div>
             <div class="col-md-6 order-2 order-md-2 text-center">
@@ -107,7 +112,7 @@ function isLoggedIn() {
                              <span class="float-right"><i class="fas fa-lock"></i></span>
                         <?php endif; ?>
                     </h5>
-                    <p class="card-text">Anda akan mengerjakan latihan dnegan materi yang dibawakan sebelumnya.</p>
+                    <p class="card-text">Anda akan mengerjakan latihan dengan materi yang dibawakan sebelumnya.</p>
                         <?php if (isset($_SESSION['completed_box_model_layout']) && $_SESSION['completed_box_model_layout']): ?>
                             <a href="latihan.php" class="btn btn-success">Memulai Latihan</a>
                         <?php else: ?>
@@ -158,7 +163,7 @@ function isLoggedIn() {
                              <span class="float-right"><i class="fas fa-lock"></i></span>
                         <?php endif; ?>
                     </h5>
-                    <p class="card-text">Anda akan mengerjakan latihan dnegan materi yang dibawakan sebelumnya.</p>
+                    <p class="card-text">Anda akan mengerjakan latihan dengan materi yang dibawakan sebelumnya.</p>
                         <?php if (isset($_SESSION['completed_responsive_design']) && $_SESSION['completed_responsive_design']): ?>
                             <a href="latihan2.php" class="btn btn-success">Memulai Latihan</a>
                         <?php else: ?>
@@ -209,7 +214,7 @@ function isLoggedIn() {
                              <span class="float-right"><i class="fas fa-lock"></i></span>
                         <?php endif; ?>
                     </h5>
-                    <p class="card-text">Belajar memahami logika program menggunakan JavaScript</p>
+                    <p class="card-text">Anda akan mengerjakan latihan dengan materi yang dibawakan sebelumnya.</p>
                         <?php if (isset($_SESSION['completed_struktur_kontrol_fungsi']) && $_SESSION['completed_struktur_kontrol_fungsi']): ?>
                             <a href="latihan3.php" class="btn btn-success">Memulai Latihan</a>
                         <?php else: ?>
@@ -224,14 +229,14 @@ function isLoggedIn() {
 
     <footer id="footer" class="footer section">
       <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span>
-          <strong class="px-1 sitename">OneBootcamp</strong
-          ><span>All Rights Reserved</span>
-        </p>
-        <div class="credits">Designed by Kelompok 1</div>
+      <p>© <span>Copyright</span>
+          <strong class="px-1 sitename">Bobootcamp</strong
+          ><span>All Rights Reserved</span></p>
+        <div class="credits">Designed by Kelompok 4</div>
       </div>
     </footer>
+
+    
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootcamp Frontend</title>
+    <title>Bootcamp Backend</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,7 +21,12 @@ function isLoggedIn() {
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="../../../index.php">OneBootcamp</a>
+        <div class="d-flex align-items-center">
+    <div class="logo">
+        <img src="https://i.ibb.co.com/Pcj6w0D/Logo-bobootcamp1.png" class="px-1" width="50" alt="Logo">
+    </div>
+    <a class="navbar-brand ms-2" href="../../../index.php">Bobootcamp</a>
+</div>
           <button
             class="navbar-toggler"
             type="button"
@@ -59,7 +64,7 @@ function isLoggedIn() {
                 <div class="hero-content pt-5 pb-5">
                     <h1 class="text-warning">Back-end Development</h1>
                     <p class="text-light"> Pelajari dasar pemrograman server, pengelolaan database, dan API untuk membangun sistem web yang kuat dan terstruktur.</p>
-                    <a href="#" class="btn btn-warning mt-5" id="pelajariMateriBtn">Pelajari Materi</a>
+                    <a href="pengenalan.php" class="btn btn-warning mt-5" id="pelajariMateriBtn">Pelajari Materi</a>
                 </div>
             </div>
             <div class="col-md-6 order-2 order-md-2 text-center">
@@ -135,12 +140,10 @@ function isLoggedIn() {
 
     <footer id="footer" class="footer section">
       <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span>
-          <strong class="px-1 sitename">OneBootcamp</strong
-          ><span>All Rights Reserved</span>
-        </p>
-        <div class="credits">Designed by Kelompok 1</div>
+      <p>© <span>Copyright</span>
+          <strong class="px-1 sitename">Bobootcamp</strong
+          ><span>All Rights Reserved</span></p>
+        <div class="credits">Designed by Kelompok 4</div>
       </div>
     </footer>
 
