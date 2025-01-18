@@ -163,9 +163,10 @@ session_start();
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>© <span>Copyright</span>
-          <strong class="px-1 sitename">Bobootcamp</strong
+    <p>© <span>Copyright</span>
+          <strong class="px-1 sitename">OneBootcamp</strong
           ><span>All Rights Reserved</span></p>
+        <div class="credits">Designed by Kelompok 1</div>
     </footer>
 
     <script>

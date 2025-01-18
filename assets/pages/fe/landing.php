@@ -22,10 +22,7 @@ function isLoggedIn() {
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
         <div class="d-flex align-items-center">
-    <div class="logo">
-        <img src="https://i.ibb.co.com/Pcj6w0D/Logo-bobootcamp1.png" class="px-1" width="50" alt="Logo">
-    </div>
-    <a class="navbar-brand ms-2" href="../../../index.php">Bobootcamp</a>
+    <a class="navbar-brand ms-2" href="../../../index.php">OneBootcamp</a>
 </div>
           <button
             class="navbar-toggler"
@@ -230,9 +227,9 @@ function isLoggedIn() {
     <footer id="footer" class="footer section">
       <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span>
-          <strong class="px-1 sitename">Bobootcamp</strong
+          <strong class="px-1 sitename">OneBootcamp</strong
           ><span>All Rights Reserved</span></p>
-        <div class="credits">Designed by Kelompok 4</div>
+        <div class="credits">Designed by Kelompok 1</div>
       </div>
     </footer>
 
