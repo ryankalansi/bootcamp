@@ -66,7 +66,7 @@ function isLoggedIn() {
             </div>
             <div class="col-md-6 order-2 order-md-2 text-center">
                 <div class="hero-image">
-                    <img src="../../../assets/img/landing.png" alt="Hero Image" class="img-fluid">
+                    <img src="../../../assets/img/fe2.jpg" alt="Hero Image" class="img-fluid">
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ session_start();
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Bobootcamp</title>
+    <title>OneBootcamp</title>
 
     <!-- Bootstrap -->
     <link
@@ -109,7 +109,7 @@ session_start();
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <p class="who-we-are">Bobootcamp</p>
+              <p class="who-we-are">OneBootcamp</p>
               <h3>Membuka Pintu Teknologi untuk Semua</h3>
               <p>
                 <i> Belajar Koding di Mana Saja, Kapan Saja, Tanpa Biaya.</i>
